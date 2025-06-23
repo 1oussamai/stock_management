@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class CostumSearchBar extends StatelessWidget {
-  const CostumSearchBar({super.key});
-
+  const CostumSearchBar({super.key, this.hintText});
+  final String? hintText;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-          hintText: "search for costumers",
+          hintText: hintText,
           prefixIcon: const Icon(Icons.search),
           filled: true,
           fillColor: Colors.white,

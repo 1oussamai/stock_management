@@ -1,31 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gestion/constans.dart';
-import 'package:gestion/widgets/costum_search_bar.dart';
-
-class CustemrsView extends StatelessWidget {
-  const CustemrsView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const SafeArea(
-      child: Scaffold(
-        body: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              SizedBox(height: 20),
-              CostumSearchBar(
-                hintText: 'Search for costumrs',
-              ),
-              SizedBox(height: 20),
-              CostumersCard(),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 class CostumersCard extends StatelessWidget {
   const CostumersCard({
