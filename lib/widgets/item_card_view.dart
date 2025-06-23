@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 
 class ItemCardView extends StatelessWidget {
   const ItemCardView({
-    super.key,
+    super.key, required this.name, required this.icon,
   });
+  final String name;
+  final String icon;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Container(
         height: 170,
         width: 170,
@@ -18,7 +20,7 @@ class ItemCardView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 2),
+            const SizedBox(height: 2),
             Image.asset(
               "assets/icons/box.png",
               height: 90,

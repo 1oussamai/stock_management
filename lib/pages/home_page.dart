@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gestion/constans.dart';
 import 'package:gestion/widgets/item_card_view.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,18 +12,24 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           centerTitle: true,
-          title: Text('Store'),
+          title: const Text('Store'),
           actions: const [Icon(Icons.logout)],
         ),
         backgroundColor: Colors.grey,
         body: GridView(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             mainAxisSpacing: 2,
           ),
           children: const [
-            ItemCardView(),
-            ItemCardView(),
+            ItemCardView(
+              name: 'PRODUCTS',
+              icon: boxImage,
+            ),
+            ItemCardView(
+              name: "CUSTEMRS",
+              icon: custemrsImage,
+            ),
           ],
         ),
       ),
