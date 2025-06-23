@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class ItemCardView extends StatelessWidget {
   const ItemCardView({
-    super.key, required this.name, required this.icon,
+    super.key,
+    required this.name,
+    required this.icon,
   });
   final String name;
   final String icon;
@@ -10,7 +12,7 @@ class ItemCardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       child: Container(
         height: 170,
         width: 170,
@@ -22,15 +24,15 @@ class ItemCardView extends StatelessWidget {
           children: [
             const SizedBox(height: 2),
             Image.asset(
-              "assets/icons/box.png",
+              icon,
               height: 90,
               width: 90,
             ),
             const SizedBox(
               height: 20,
             ),
-            const Text(
-              'PRODUCTS',
+            Text(
+              name,
               style: TextStyle(fontSize: 20),
             ),
           ],

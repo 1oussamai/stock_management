@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
           title: const Text('Store'),
           actions: const [Icon(Icons.logout)],
         ),
-        backgroundColor: Colors.grey,
+        // backgroundColor: Colors.grey,
         body: GridView(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
@@ -23,12 +23,32 @@ class HomePage extends StatelessWidget {
           ),
           children: const [
             ItemCardView(
+              name: 'SELL',
+              icon: cashImage,
+            ),
+            ItemCardView(
+              name: 'BUY',
+              icon: buyImages,
+            ),
+            ItemCardView(
               name: 'PRODUCTS',
               icon: boxImage,
             ),
             ItemCardView(
               name: "CUSTEMRS",
               icon: custemrsImage,
+            ),
+            ItemCardView(
+              name: 'SUPPLIERS',
+              icon: suppliersImage,
+            ),
+            ItemCardView(
+              name: 'TRANSACTION',
+              icon: transactionsImage,
+            ),
+            ItemCardView(
+              name: 'PROFILE',
+              icon: profileImage,
             ),
           ],
         ),
